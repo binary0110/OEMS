@@ -1,2 +1,43 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+!!!
+%html{lang: "en-GB"}
+  %head
+    %title The Old Etonian Medical Society
+    %link{href: "./bootstrap.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "./bootstrap-responsive.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "./shadowbox.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "./home.css", rel: "stylesheet", type: "text/css"}/
+  %body
+    .container-fluid
+      .navbar
+        .navbar-inner
+          .container
+            %a.brand{href: "./"} Home
+            %ul.nav.pull-left
+              %li.divider-vertical
+              %li
+                %a{href: "./cv"} About
+              %li.divider-vertical
+              %li
+                %a{href: "./awards"} News
+              %li.divider-vertical
+              %li
+                %a{href: "./publications"} Events
+              %li.divider-vertical
+              %li
+                %a{href: "./posters"} Committee
+            %ul.nav.pull-right
+              %li
+                %a{href: "./contact", rel: "shadowbox;width=400;height=380"} Contact
+              %li.divider-vertical
+              %li
+                %a{href: "http://tripartite.oems.org.uk"} Members' Database
+      .homepagetitle
+        %h1 The Old Etonian Medical Society
+        %h2 OEMS
+      .container-fluid
+        %p The Old Etonian Medical Society (OEMS) etc etc
+  %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"}
+  %script{src: "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"}
+  %script{src: "./shadowbox.js", type: "text/javascript"}
+  :javascript
+    Shadowbox.init();
