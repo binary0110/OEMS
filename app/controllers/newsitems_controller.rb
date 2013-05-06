@@ -10,6 +10,17 @@ class NewsitemsController < ApplicationController
     end
   end
 
+  # GET /newsitems/newslist
+  # GET /newsitems/newslist.json
+  def newslist
+    @newsitems = Newsitem.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @newsitems }
+    end
+  end
+
   # GET /newsitems/1
   # GET /newsitems/1.json
   def show

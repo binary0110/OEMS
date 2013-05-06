@@ -10,6 +10,17 @@ class EventitemsController < ApplicationController
     end
   end
 
+  # GET /eventitems/eventlist
+  # GET /eventitems/eventlist.json
+  def eventlist
+    @eventitems = Eventitem.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @eventitems }
+    end
+  end
+
   # GET /eventitems/1
   # GET /eventitems/1.json
   def show

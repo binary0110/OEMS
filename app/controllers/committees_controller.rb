@@ -10,6 +10,17 @@ class CommitteesController < ApplicationController
     end
   end
 
+  # GET /committees/committeelist
+  # GET /committees/committeelist.json
+  def committeelist
+    @committees = Committee.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @committees }
+    end
+  end
+
   # GET /committees/1
   # GET /committees/1.json
   def show
