@@ -11,3 +11,71 @@
  *= require_self
  *= require_tree .
  */
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 950px;
+}
+body {
+    font-family:Arial;
+    background: url('./bg.jpg') #eee;
+    margin:0px;
+    font-size:15px;
+    line-height:21px;
+    color:#333;
+}
+
+header {
+    margin-bottom:20px;
+    padding:20px 30px;
+    background:#E8F3F8;
+    position:relative;
+    border-radius:15px;
+}
+
+header img {
+    /*float:right; - Easy way */ 
+    position:absolute;
+    top:0px;
+    right:0px;
+    padding:0px 0px 0px 0px;
+    background: url('./bg.jpg') #eee;
+}
+
+h1 {
+    font-weight:bold;
+    font-size:30px;
+    margin-top:0px;
+    margin-bottom:10px;
+}
+
+h2 {
+    font-weight:normal;
+    font-size:25px;
+    line-height:25px;
+    margin:0px;
+    padding-bottom:15px;
+}
+
+h2+p {
+    margin-top:10px;
+}
+
+h3 {
+    font-weight:normal;
+    font-size:20px;
+    line-height:20px;
+    margin:30px 0px 0px 0px;
+}
+
+h2+h3 {
+    margin-top:20px;
+}
+
+h3+p {
+    margin-top:10px;
+}
+
+p {
+    margin:10px 0px 10px 00px;
+}
