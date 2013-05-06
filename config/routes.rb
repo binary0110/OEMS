@@ -1,4 +1,19 @@
 OEMS::Application.routes.draw do
+  get "contact/contact"
+
+  get "about/about"
+
+  get "home/index"
+
+  resources :eventitems
+
+
+  resources :newsitems
+
+
+  resources :committees
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

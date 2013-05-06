@@ -1,0 +1,23 @@
+%h1 Listing newsitems
+
+%table
+  %tr
+    %th Date
+    %th Title
+    %th Content
+    %th
+    %th
+    %th
+
+  - @newsitems.each do |newsitem|
+    %tr
+      %td= newsitem.date
+      %td= newsitem.title
+      %td= newsitem.content
+      %td= link_to 'Show', newsitem
+      %td= link_to 'Edit', edit_newsitem_path(newsitem)
+      %td= link_to 'Destroy', newsitem, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Newsitem', new_newsitem_path
