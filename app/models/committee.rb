@@ -1,3 +1,4 @@
 class Committee < ActiveRecord::Base
-  attr_accessible :firstname, :position, :surname, :title
+  has_many :eventitems
+  has_many :newsitems
 end

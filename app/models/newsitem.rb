@@ -1,3 +1,3 @@
 class Newsitem < ActiveRecord::Base
-  attr_accessible :content, :date, :title
+  belongs_to :committee
 end

@@ -18,5 +18,8 @@
   .field
     = f.label :content
     = f.text_area :content
+  .field
+    Author
+    = f.collection_select :committee_id, Committee.all, :id, :position
   .actions
     = f.submit 'Save'

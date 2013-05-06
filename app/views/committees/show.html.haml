@@ -13,6 +13,24 @@
   %b Position:
   = @committee.position
 
+%p
+  %b Event items submitted:  
+
+%ul
+  -@committee.eventitems.each do |eventitem|
+    %li
+      #{eventitem.title}
+      (#{eventitem.date})
+
+%p
+  %b News items submitted:  
+
+%ul
+  -@committee.newsitems.each do |newsitem|
+    %li
+      #{newsitem.title}
+      (#{newsitem.date})
+
 = link_to 'Edit', edit_committee_path(@committee)
 \|
 = link_to 'Back', committees_path

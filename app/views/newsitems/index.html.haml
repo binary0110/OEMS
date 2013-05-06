@@ -5,6 +5,7 @@
     %th Date
     %th Title
     %th Content
+    %th Author
     %th
     %th
     %th
@@ -14,6 +15,7 @@
       %td= newsitem.date
       %td= newsitem.title
       %td= newsitem.content
+      %td= newsitem.committee.position
       %td= link_to 'Show', newsitem
       %td= link_to 'Edit', edit_newsitem_path(newsitem)
       %td= link_to 'Destroy', newsitem, :method => :delete, :data => { :confirm => 'Are you sure?' }

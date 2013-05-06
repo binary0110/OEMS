@@ -9,6 +9,9 @@
 %p
   %b Content:
   = @newsitem.content
+%p
+  %b Author:
+  = @newsitem.committee.position
 
 = link_to 'Edit', edit_newsitem_path(@newsitem)
 \|

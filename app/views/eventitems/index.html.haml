@@ -6,6 +6,7 @@
     %th Venue
     %th Title
     %th Content
+    %th Author
     %th
     %th
     %th
@@ -16,6 +17,7 @@
       %td= eventitem.venue
       %td= eventitem.title
       %td= eventitem.content
+      %td= eventitem.committee.position
       %td= link_to 'Show', eventitem
       %td= link_to 'Edit', edit_eventitem_path(eventitem)
       %td= link_to 'Destroy', eventitem, :method => :delete, :data => { :confirm => 'Are you sure?' }

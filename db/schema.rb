@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506152232) do
+ActiveRecord::Schema.define(:version => 20130506165621) do
 
   create_table "committees", :force => true do |t|
     t.string   "title"
@@ -27,16 +27,18 @@ ActiveRecord::Schema.define(:version => 20130506152232) do
     t.string   "venue"
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "committee_id"
   end
 
   create_table "newsitems", :force => true do |t|
     t.date     "date"
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "committee_id"
   end
 
 end
