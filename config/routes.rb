@@ -2,19 +2,11 @@ OEMS::Application.routes.draw do
 
   get "home/index"
 
-  resources :eventitems, only: %w(index) do
-    collection { get :eventlist }
-  end
+  resources :eventitems
 
+  resources :newsitems
 
-  resources :newsitems, only: %w(index) do
-    collection { get :newslist }
-  end
-
-
-  resources :committees, only: %w(index) do
-    collection { get :committeelist }
-  end
+  resources :committees
 
 
   # The priority is based upon order of creation:
