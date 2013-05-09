@@ -2,5 +2,7 @@
   %h1 The Old Etonian Medical Society
   %h2 OEMS
 .container-fluid
-  = image_tag("OEMS.png", :align=> "middle")
-  %p The Old Etonian Medical Society (OEMS) etc etc
+  .row-fluid
+    %a{href: "/about", target: "_self"}
+    .pagination-centered
+      = link_to image_tag("OEMS.png"), "/about"
