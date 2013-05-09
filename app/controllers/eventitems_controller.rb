@@ -1,4 +1,5 @@
 class EventitemsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /eventitems
   # GET /eventitems.json
   def index

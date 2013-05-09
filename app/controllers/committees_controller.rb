@@ -1,4 +1,5 @@
 class CommitteesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /committees
   # GET /committees.json
   def index
