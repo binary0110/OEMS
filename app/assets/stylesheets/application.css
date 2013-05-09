@@ -8,14 +8,26 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap.min.css
+ *= require bootstrap-responsive.min.css
+ *= require shadowbox.css
+ *= require scaffolds.css
+ *= require home.css
  *= require_self
- *= require_tree .
  */
+
 .container-fluid {
     margin-right: auto;
     margin-left: auto;
     max-width: 950px;
 }
+
+a:link {color:#0088CC;}
+a:hover, a:focus { 
+color: #0088CC;
+text-decoration: underline;
+}
+
 body {
     font-family:Arial;
     background: url('./bg.jpg') #eee;
