@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'rails_admin'
 gem 'devise'
 
 # To use ActiveModel has_secure_password
