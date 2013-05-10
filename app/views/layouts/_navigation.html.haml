@@ -1,0 +1,23 @@
+.navbar
+  .navbar-inner
+    .container
+      = link_to 'Home', root_path, class: 'brand'
+      %ul.nav.pull-left
+        %li.divider-vertical
+        %li
+          = link_to 'About', home_about_path
+        %li.divider-vertical
+        %li
+          = link_to 'News' , home_news_path
+        %li.divider-vertical
+        %li
+          = link_to 'Events', home_events_path
+        %li.divider-vertical
+        %li
+          = link_to 'Committee', home_committee_path
+      %ul.nav.pull-right
+        %li
+          %a{href: "/contact", rel: "shadowbox;width=400;height=380"} Contact
+        %li.divider-vertical
+        %li
+          = link_to 'Members\' Database', home_members_path
