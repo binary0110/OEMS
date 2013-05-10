@@ -1,34 +1,14 @@
 !!!
 %html{lang: "en-GB"}
   %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title The Old Etonian Medical Society
     = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
   %body
     .container-fluid
-      .navbar
-        .navbar-inner
-          .container
-            %a.brand{href: "/"} Home
-            %ul.nav.pull-left
-              %li.divider-vertical
-              %li
-                %a{href: "/about"} About
-              %li.divider-vertical
-              %li
-                %a{href: "/news"} News
-              %li.divider-vertical
-              %li
-                %a{href: "/events"} Events
-              %li.divider-vertical
-              %li
-                %a{href: "/committee"} Committee
-            %ul.nav.pull-right
-              %li
-                %a{href: "/contact", rel: "shadowbox;width=400;height=380"} Contact
-              %li.divider-vertical
-              %li
-                %a{href: "/members"} Members' Database
+      = render partial: 'layouts/navigation'
       = yield
-  = javascript_include_tag "application"
-  :javascript
-    Shadowbox.init();
+    :javascript
+      Shadowbox.init();
