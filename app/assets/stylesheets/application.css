@@ -28,6 +28,12 @@ color: #0088CC;
 text-decoration: underline;
 }
 
+.thumb {
+    margin:25px;
+    padding:10px;
+    border-color:transparent;
+}
+
 body {
     font-family:Arial;
     background: url('./bg.jpg') #eee;
