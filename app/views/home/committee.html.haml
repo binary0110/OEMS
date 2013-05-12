@@ -1,8 +1,7 @@
 %h1 Committee
 
 - @committees.each do |committee|
-  .span2
-    %p= committee.title
-    %p= committee.firstname
-    %p= committee.surname
-    %p= committee.position
+  .row-fluid
+    .span10.offset1
+      %h3= committee.position
+      %h4= [committee.title, committee.firstname, committee.surname].join(" ")
