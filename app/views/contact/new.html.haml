@@ -1,0 +1,8 @@
+%h1 Contact the OEMS Executive Committee
+%p.lead.text-success= flash[:alert]
+= simple_form_for(@message, :url => contact_path, :html => {:class => 'form-horizontal'}) do |f|
+  = f.input :name, label: 'Name', :required => true
+  = f.input :email, label: 'E-mail address', :required => true
+  = f.input :subject, label: 'Subject', :requiried => true
+  = f.input :body, label: 'Message', :as => :text, :required => true
+  = f.button :submit, 'Send message'

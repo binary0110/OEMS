@@ -34,6 +34,11 @@ text-decoration: underline;
     border-color:transparent;
 }
 
+.oemsevent, .oemsnews {
+    border-bottom: 3px solid #c1dbf1;
+    padding-bottom: 15px;
+}
+
 body {
     font-family:Arial;
     background: url('./bg.jpg') #eee;

@@ -61,6 +61,16 @@ OEMS::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.action_mailer.smtp_settings = {
+    :address              => "scl-vm-www13.servercentre.net",
+    :port                 => 26,
+    :domain               => "oems.org.uk",
+    :user_name            => "weg98hjs@oems.org.uk",
+    :password             => "weg98hjs",
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
+
   config.action_mailer.default_url_options = { :host => 'oems.herokuapp.com' }
 
   # Log the query plan for queries taking more than this (works

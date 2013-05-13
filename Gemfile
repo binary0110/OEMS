@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'haml'
 gem 'haml-rails'
 gem 'thin'
+gem 'mail_form'
+gem 'simple_form'
 
 group :development, :test do
   gem 'sqlite3'

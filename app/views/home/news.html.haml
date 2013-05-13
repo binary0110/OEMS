@@ -2,7 +2,7 @@
 
 - @newsitems.each do |newsitem|
   .row-fluid
-    .span10.offset1
+    .span10.offset1.oemsnews
       %h3= newsitem.title
       %h4= newsitem.date.to_s :oems_standard
       %p= newsitem.content

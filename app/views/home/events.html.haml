@@ -2,9 +2,8 @@
 
 - @eventitems.each do |eventitem|
   .row-fluid
-    .span10.offset1
+    .span10.offset1.oemsevent
       %h3= eventitem.title
       %h4= eventitem.date.to_s :oems_standard
       %h5 Venue: #{eventitem.venue}
       %p= eventitem.content
-      %h6 Author: #{[eventitem.committee.title, eventitem.committee.firstname, eventitem.committee.surname, eventitem.committee.position].to_sentence(:words_connector => " ", :last_word_connector => ", ")}
