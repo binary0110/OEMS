@@ -6,4 +6,4 @@
       %h3= eventitem.title
       %h4= eventitem.date.to_s :oems_standard
       %h5 Venue: #{eventitem.venue}
-      %p= eventitem.content
+      %p=raw eventitem.content

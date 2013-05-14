@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 gem 'haml'
 gem 'haml-rails'
 gem 'thin'
-gem 'mail_form'
+gem 'bootstrap-wysihtml5-rails'
 gem 'simple_form'
 
 group :development, :test do

@@ -2,7 +2,33 @@
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
+  config.model Eventitem do
+    edit do
+      configure :content do
+        bootstrap_wysihtml5 true
+        bootstrap_wysihtml5_config_options :html => true, :color => true
+      end
+    end
+  end
 
+  config.model Newsitem do
+    edit do
+      configure :content do
+        bootstrap_wysihtml5 true
+        bootstrap_wysihtml5_config_options :html => true, :color => true
+      end
+    end
+  end
+
+  config.model Committee do
+    object_label_method do
+      :custom_label_method
+    end
+  end
+
+  def custom_label_method
+    "#{self.title} #{self.firstname} #{self.surname}, #{self.position}"
+  end
 
   ################  Global configuration  ################
 

@@ -5,5 +5,5 @@
     .span10.offset1.oemsnews
       %h3= newsitem.title
       %h4= newsitem.date.to_s :oems_standard
-      %p= newsitem.content
+      %p=raw newsitem.content
       %h6 Author: #{[newsitem.committee.title, newsitem.committee.firstname, newsitem.committee.surname, newsitem.committee.position].to_sentence(:words_connector => " ", :last_word_connector => ", ")}
