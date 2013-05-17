@@ -20,6 +20,15 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Etonmedical do
+    edit do
+      configure :content do
+        bootstrap_wysihtml5 true
+        bootstrap_wysihtml5_config_options :html => true, :color => true
+      end
+    end
+  end
+
   config.model Committee do
     object_label_method do
       :custom_label_method

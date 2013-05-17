@@ -9,6 +9,9 @@ class HomeController < ApplicationController
   def events
     @eventitems = Eventitem.all
   end
+  def eton
+    @etonmedicals = Etonmedical.all
+  end
   def committee
     @committees = Committee.all
   end

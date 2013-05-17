@@ -10,8 +10,13 @@
         %li
           = link_to 'News' , home_news_path
         %li.divider-vertical
-        %li
-          = link_to 'Events', home_events_path
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Events
+            %b.caret
+          %ul.dropdown-menu
+            %li= link_to 'OEMS', home_events_path
+            %li= link_to 'Eton College', home_eton_path
         %li.divider-vertical
         %li
           = link_to 'Committee', home_committee_path

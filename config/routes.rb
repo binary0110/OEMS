@@ -6,6 +6,7 @@ OEMS::Application.routes.draw do
   get 'home/about'
   get 'home/news'
   get 'home/events'
+  get 'home/eton'
   get 'home/committee'
   get 'home/members'
   get 'contact/new'
@@ -13,6 +14,7 @@ OEMS::Application.routes.draw do
   devise_for :users
 
   resources :eventitems
+  resources :etonmedicals
   resources :newsitems
   resources :committees
   resources :contact
@@ -21,6 +23,7 @@ OEMS::Application.routes.draw do
   match 'about' => 'home#about'
   match 'news' => 'home#news'
   match 'events' => 'home#events'
+  match 'eton' => 'home#eton'
   match 'committee' => 'home#committee'
   match 'members' => 'home#members'
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
