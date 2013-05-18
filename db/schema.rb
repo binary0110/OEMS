@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130518155804) do
+ActiveRecord::Schema.define(:version => 20130518180313) do
 
   create_table "committees", :force => true do |t|
     t.string   "title"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130518155804) do
     t.integer  "committee_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.text     "customhtml"
   end
 
   create_table "eventitemimgs", :force => true do |t|
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20130518155804) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "committee_id"
+    t.text     "customhtml"
   end
 
   create_table "newsitemimgs", :force => true do |t|
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20130518155804) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "committee_id"
+    t.text     "customhtml"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
