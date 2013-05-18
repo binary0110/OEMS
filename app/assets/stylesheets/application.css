@@ -39,6 +39,13 @@ text-decoration: underline;
     padding-bottom: 15px;
 }
 
+.photoslideshow {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 850px;
+    position: center;
+}
+
 body {
     font-family:Arial;
     background: url('./bg.jpg') #eee;

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  caption: MyString
+  imglink: MyString
+  thumblink: MyString
+  newsitem_id: 1
+
+two:
+  caption: MyString
+  imglink: MyString
+  thumblink: MyString
+  newsitem_id: 1

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517211409) do
+ActiveRecord::Schema.define(:version => 20130518155804) do
 
   create_table "committees", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(:version => 20130517211409) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "priority"
+  end
+
+  create_table "etonmedicalimgs", :force => true do |t|
+    t.string   "caption"
+    t.string   "imglink"
+    t.string   "thumblink"
+    t.integer  "etonmedical_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "etonmedicals", :force => true do |t|
@@ -33,6 +42,15 @@ ActiveRecord::Schema.define(:version => 20130517211409) do
     t.datetime "updated_at",   :null => false
   end
 
+  create_table "eventitemimgs", :force => true do |t|
+    t.string   "caption"
+    t.string   "imglink"
+    t.string   "thumblink"
+    t.integer  "eventitem_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "eventitems", :force => true do |t|
     t.date     "date"
     t.string   "venue"
@@ -41,6 +59,15 @@ ActiveRecord::Schema.define(:version => 20130517211409) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.integer  "committee_id"
+  end
+
+  create_table "newsitemimgs", :force => true do |t|
+    t.string   "caption"
+    t.string   "imglink"
+    t.string   "thumblink"
+    t.integer  "newsitem_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "newsitems", :force => true do |t|
