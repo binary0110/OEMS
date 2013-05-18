@@ -71,7 +71,7 @@ OEMS::Application.configure do
     :enable_starttls_auto => true
   }
 
-  config.action_mailer.default_url_options = { :host => 'oems.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'oems.org.uk' }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)

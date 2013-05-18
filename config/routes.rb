@@ -28,4 +28,6 @@ OEMS::Application.routes.draw do
   match 'members' => 'home#members'
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  match 'tripartitedinner' => redirect('https://docs.google.com/forms/d/1jvTMWPEscwyubiNcxEkAS7sptZf-x1YPz1IR-g31Whk/viewform?pli=1')
+  match 'memberupdate' => redirect('https://docs.google.com/forms/d/1Xg5XJjATKrKKQhGNNRBBbCwa-2RLbF-_H_6iYn2fpR8/viewform?pli=1')
 end
