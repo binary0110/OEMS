@@ -10,6 +10,7 @@ gem 'haml-rails'
 gem 'thin'
 gem 'bootstrap-wysihtml5-rails'
 gem 'simple_form'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'sqlite3'
