@@ -8,7 +8,6 @@ OEMS::Application.routes.draw do
   get 'home/events'
   get 'home/eton'
   get 'home/committee'
-  get 'home/members'
   get 'contact/new'
 
   devise_for :users
@@ -25,7 +24,6 @@ OEMS::Application.routes.draw do
   match 'events' => 'home#events'
   match 'eton' => 'home#eton'
   match 'committee' => 'home#committee'
-  match 'members' => 'home#members'
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
   match 'tripartitedinner' => redirect('https://docs.google.com/forms/d/1jvTMWPEscwyubiNcxEkAS7sptZf-x1YPz1IR-g31Whk/viewform?pli=1')
