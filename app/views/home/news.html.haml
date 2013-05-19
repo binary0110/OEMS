@@ -23,5 +23,6 @@
           %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
       - else
         // do nothing
+      %p=raw newsitem.customhtml
       %p=raw newsitem.content
       %h6 #{[newsitem.committee.title, newsitem.committee.firstname, newsitem.committee.surname, newsitem.committee.position].to_sentence(:words_connector => " ", :last_word_connector => ", ")}
