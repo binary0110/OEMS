@@ -28,12 +28,6 @@ color: #0088CC;
 text-decoration: underline;
 }
 
-.navbar .brand {
-  padding: 8px 20px 12px;
-  font-size: 20px;
-  color: #96c8a2;
-}
-
 .navbar .nav > .li > a:hover, .navbar .nav > li > a:focus {
   color: #96c8a2;
 }
