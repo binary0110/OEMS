@@ -5,6 +5,23 @@
     .span10.offset1.oemsnews
       %h3= newsitem.title
       %h4= newsitem.date.to_s :oems_standard
-      %p=raw newsitem.customhtml
+      - if newsitem.newsitemimgs.count > 0
+        #myCarousel.carousel.slide
+          %ol.carousel-indicators
+            - newsitem.newsitemimgs.each_with_index do |image, index|
+              - if index == 0
+                %li.active{"data-slide-to" => index, "data-target" => "#myCarousel"}
+              - else
+                %li{"data-slide-to" => index, "data-target" => "#myCarousel"}
+          .carousel-inner
+            - newsitem.newsitemimgs.each_with_index do |image, index|
+              - if index == 0
+                .active.item= image_tag image.thumblink
+              - else
+                .item= image_tag image.thumblink
+          %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+          %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+      - else
+        // do nothing
       %p=raw newsitem.content
       %h6 #{[newsitem.committee.title, newsitem.committee.firstname, newsitem.committee.surname, newsitem.committee.position].to_sentence(:words_connector => " ", :last_word_connector => ", ")}
