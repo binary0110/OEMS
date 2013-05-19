@@ -82,10 +82,13 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     nested_form (0.3.2)
+    newrelic_rpm (3.6.2.96)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -172,7 +175,9 @@ DEPENDENCIES
   haml
   haml-rails
   jquery-rails
+  newrelic_rpm
   pg
+  quiet_assets
   rails (= 3.2.13)
   rails_admin
   sass-rails (~> 3.2.3)

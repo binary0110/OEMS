@@ -11,6 +11,8 @@ gem 'thin'
 gem 'bootstrap-wysihtml5-rails'
 gem 'simple_form'
 gem 'google-analytics-rails'
+gem 'quiet_assets', :group => :development
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3'
