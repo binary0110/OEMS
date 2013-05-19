@@ -5,24 +5,8 @@
     .span10.offset1.oemsevent
       %h3= eventitem.title
       %h4= eventitem.date.to_s :oems_standard
-      - if eventitem.eventitemimgs.count > 0
-        #myCarousel.carousel.slide
-          %ol.carousel-indicators
-            - eventitem.eventitemimgs.each_with_index do |image, index|
-              - if index == 0
-                %li.active{"data-slide-to" => index, "data-target" => "#myCarousel"}
-              - else
-                %li{"data-slide-to" => index, "data-target" => "#myCarousel"}
-          .carousel-inner
-            - eventitem.eventitemimgs.each_with_index do |image, index|
-              - if index == 0
-                .active.item= image_tag image.thumblink
-              - else
-                .item= image_tag image.thumblink
-          %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
-          %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
-      - else
-        // do nothing
+      - unless eventitem.eventitemimgs.empty?
+        = render partial: 'carousel', locals: { :images => eventitem.eventitemimgs }
       %h5 Venue: #{eventitem.venue}
       %p=raw eventitem.customhtml
       %p=raw eventitem.content

@@ -4,13 +4,13 @@ class HomeController < ApplicationController
   def about
   end
   def news
-    @newsitems = Newsitem.all
+    @newsitems = Newsitem.includes(:newsitemimgs)
   end
   def events
-    @eventitems = Eventitem.all
+    @eventitems = Eventitem.includes(:eventitemimgs)
   end
   def eton
-    @etonmedicals = Etonmedical.all
+    @etonmedicals = Etonmedical.includes(:etonmedicalimgs)
   end
   def committee
     @committees = Committee.all

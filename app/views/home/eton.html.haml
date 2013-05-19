@@ -6,23 +6,7 @@
       %h3= etonmedical.title
       %h4= etonmedical.date.to_s :oems_standard
       %h5 Venue: #{etonmedical.venue}
-      - if etonmedical.etonmedicalimgs.count > 0
-        #myCarousel.carousel.slide
-          %ol.carousel-indicators
-            - etonmedical.etonmedicalimgs.each_with_index do |image, index|
-              - if index == 0
-                %li.active{"data-slide-to" => index, "data-target" => "#myCarousel"}
-              - else
-                %li{"data-slide-to" => index, "data-target" => "#myCarousel"}
-          .carousel-inner
-            - etonmedical.etonmedicalimgs.each_with_index do |image, index|
-              - if index == 0
-                .active.item= image_tag image.thumblink
-              - else
-                .item= image_tag image.thumblink
-          %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
-          %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
-      - else
-        // do nothing
+      - unless etonmedical.etonmedicalimgs.empty?
+        = render partial: 'carousel', locals: { :images => etonmedical.etonmedicalimgs }
       %p=raw etonmedical.customhtml
       %p=raw etonmedical.content
