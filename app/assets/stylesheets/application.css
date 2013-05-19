@@ -32,6 +32,16 @@ text-decoration: underline;
   color: #96c8a2;
 }
 
+.carousel-caption {
+padding: 5px;
+}
+
+.carousel-caption > p {
+    margin: 0px 0px;
+    padding: 5px;
+    text-align: center;
+}
+
 .thumb {
     margin:25px;
     padding:10px;
