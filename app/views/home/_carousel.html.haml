@@ -11,11 +11,15 @@
         .active.item
           =image_tag image.thumblink
           .carousel-caption
-            %p= image.caption
+            %p
+              %a{href: image.imglink, target: "_blank"}
+                = image.caption
       - else
         .item
           =image_tag image.thumblink
           .carousel-caption
-            %p= image.caption
+            %p
+              %a{href: image.imglink, target: "_blank"}
+                = image.caption
   %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
   %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›

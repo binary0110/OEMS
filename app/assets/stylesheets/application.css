@@ -28,7 +28,13 @@ color: #0088CC;
 text-decoration: underline;
 }
 
-.navbar .nav > .li > a:hover, .navbar .nav > li > a:focus {
+.carousel-caption > p > a {color:#FFFFFF;}
+.carousel-caption > p > a:hover, a:focus { 
+color: #FFFFFF;
+text-decoration: underline;
+}
+
+.navbar .nav > li > a:hover, .navbar .brand:hover, .navbar .nav > li > a:focus {
   color: #96c8a2;
 }
 
