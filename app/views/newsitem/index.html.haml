@@ -1,3 +1,5 @@
+= content_for :head, auto_discovery_link_tag(:atom, news_path(:atom))
+
 %h1 Latest News
 
 - @newsitems.each do |newsitem|
