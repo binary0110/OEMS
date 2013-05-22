@@ -4,26 +4,26 @@ OEMS::Application.routes.draw do
 
   get 'home/index'
   get 'home/about'
-  get 'home/news'
-  get 'home/events'
-  get 'home/eton'
-  get 'home/committee'
+  get 'newsitem/index'
+  get 'eventitem/index'
+  get 'etonmedical/index'
+  get 'committee/index'
   get 'contact/new'
 
   devise_for :users
 
-  resources :eventitems
-  resources :etonmedicals
-  resources :newsitems
   resources :committees
-  resources :contact
+  resources :contacts
+  resources :etonmedicals
+  resources :eventitems
+  resources :newsitems
 
   root :to => 'home#index'
   match 'about' => 'home#about'
-  match 'news' => 'home#news'
-  match 'events' => 'home#events'
-  match 'eton' => 'home#eton'
-  match 'committee' => 'home#committee'
+  match 'news' => 'newsitem#index'
+  match 'oemsevents' => 'eventitem#index'
+  match 'etonevents' => 'etonmedical#index'
+  match 'oemscommittee' => 'committee#index'
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
   match 'tripartitedinner' => redirect('https://docs.google.com/forms/d/1jvTMWPEscwyubiNcxEkAS7sptZf-x1YPz1IR-g31Whk/viewform?pli=1')

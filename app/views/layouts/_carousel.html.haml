@@ -1,0 +1,25 @@
+#myCarousel.carousel.slide{"data-interval" => "false"}
+  %ol.carousel-indicators
+    - images.each_with_index do |image, index|
+      - if index == 0
+        %li.active{"data-slide-to" => index, "data-target" => "#myCarousel"}
+      - else
+        %li{"data-slide-to" => index, "data-target" => "#myCarousel"}
+  .carousel-inner
+    - images.each_with_index do |image, index|
+      - if index == 0
+        .active.item
+          =image_tag image.thumblink
+          .carousel-caption
+            %p
+              %a{href: image.imglink, target: "_blank"}
+                = image.caption
+      - else
+        .item
+          =image_tag image.thumblink
+          .carousel-caption
+            %p
+              %a{href: image.imglink, target: "_blank"}
+                = image.caption
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›

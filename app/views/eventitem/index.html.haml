@@ -7,6 +7,6 @@
       %h4= eventitem.date.to_s :oems_standard
       %h5 Venue: #{eventitem.venue}
       - unless eventitem.eventitemimgs.empty?
-        = render partial: 'carousel', locals: { :images => eventitem.eventitemimgs }
+        = render partial: 'layouts/carousel', locals: { :images => eventitem.eventitemimgs }
       %p=raw eventitem.customhtml
       %p=raw eventitem.content

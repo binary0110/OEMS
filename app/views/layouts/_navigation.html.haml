@@ -5,24 +5,24 @@
       %ul.nav.pull-left
         %li.divider-vertical
         %li
-          = link_to 'About', home_about_path
+          = link_to 'About', about_path
         %li.divider-vertical
         %li
-          = link_to 'News' , home_news_path
+          = link_to 'News' , news_path
         %li.divider-vertical
         %li.dropdown
           %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             Events
             %b.caret
           %ul.dropdown-menu
-            %li= link_to 'OEMS', home_events_path
-            %li= link_to 'Eton College', home_eton_path
+            %li= link_to 'OEMS', oemsevents_path
+            %li= link_to 'Eton College', etonevents_path
         %li.divider-vertical
         %li
-          = link_to 'Committee', home_committee_path
+          = link_to 'Committee', oemscommittee_path
       %ul.nav.pull-right
         %li
-          = link_to 'Contact', contact_new_path
+          = link_to 'Contact', contact_path
         %li.divider-vertical
         %li
           %a{href: "http://www.tripartite.org.uk", target: "_blank"} Members
