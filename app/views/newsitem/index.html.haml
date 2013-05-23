@@ -4,11 +4,12 @@
 
 - @newsitems.each do |newsitem|
   .row-fluid
-    .span10.offset1.oemsnews
-      %h3= newsitem.title
-      %h4= newsitem.date.to_s :oems_standard
-      - unless newsitem.newsitemimgs.empty?
-        = render partial: 'layouts/carousel', locals: { :images => newsitem.newsitemimgs }
-      %p=raw newsitem.customhtml
-      %p=raw newsitem.content
-      %h6 #{[newsitem.committee.title, newsitem.committee.firstname, newsitem.committee.surname, newsitem.committee.position].to_sentence(:words_connector => " ", :last_word_connector => ", ")}
+    = div_for(newsitem)  do
+      .span10.offset1.oemsnews
+        %h3= newsitem.title
+        %h4= newsitem.date.to_s :oems_standard
+        - unless newsitem.newsitemimgs.empty?
+          = render partial: 'layouts/carousel', locals: { :images => newsitem.newsitemimgs }
+        %p=raw newsitem.customhtml
+        %p=raw newsitem.content
+        %h6 #{[newsitem.committee.title, newsitem.committee.firstname, newsitem.committee.surname, newsitem.committee.position].to_sentence(:words_connector => " ", :last_word_connector => ", ")}
