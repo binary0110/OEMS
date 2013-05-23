@@ -3,7 +3,7 @@ atom_feed do |feed|
   feed.updated @newsitems.maximum(:updated_at)
 
   @newsitems.each do |newsitem|
-    feed.entry(newsitem, :url => ["news#newsitem_", newsitem.id].join) do |entry|
+    feed.entry(newsitem, :url => ["news#newsitem_", newsitem.id].join, :published => newsitem.date, :updated => newsitem.date) do |entry|
       entry.title [newsitem.title, (newsitem.date.to_s :oems_standard)].to_sentence(:two_words_connector => " - ")
       entry.content newsitem.content, :type => "html"
       entry.author do |author|
