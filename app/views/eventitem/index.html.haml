@@ -1,12 +1,15 @@
+= content_for :head, auto_discovery_link_tag(:atom, oemsevents_path(:atom))
+
 %h1 OEMS Events
 
 - @eventitems.each do |eventitem|
   .row-fluid
-    .span10.offset1.oemsevent
-      %h3= eventitem.title
-      %h4= eventitem.date.to_s :oems_standard
-      %h5 Venue: #{eventitem.venue}
-      - unless eventitem.eventitemimgs.empty?
-        = render partial: 'layouts/carousel', locals: { :images => eventitem.eventitemimgs }
-      %p=raw eventitem.customhtml
-      %p=raw eventitem.content
+    = div_for(eventitem)  do
+      .span10.offset1.oemsevent
+        %h3= eventitem.title
+        %h4= eventitem.date.to_s :oems_standard
+        %h5 Venue: #{eventitem.venue}
+        - unless eventitem.eventitemimgs.empty?
+          = render partial: 'layouts/carousel', locals: { :images => eventitem.eventitemimgs }
+        %p=raw eventitem.customhtml
+        %p=raw eventitem.content

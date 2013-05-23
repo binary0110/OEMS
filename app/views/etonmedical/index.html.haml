@@ -1,12 +1,15 @@
+= content_for :head, auto_discovery_link_tag(:atom, etonevents_path(:atom))
+
 %h1 Eton College Medical Society
 
 - @etonmedicals.each do |etonmedical|
   .row-fluid
-    .span10.offset1.oemsevent
-      %h3= etonmedical.title
-      %h4= etonmedical.date.to_s :oems_standard
-      %h5 Venue: #{etonmedical.venue}
-      - unless etonmedical.etonmedicalimgs.empty?
-        = render partial: 'layouts/carousel', locals: { :images => etonmedical.etonmedicalimgs }
-      %p=raw etonmedical.customhtml
-      %p=raw etonmedical.content
+    = div_for(etonmedical)  do
+      .span10.offset1.oemsevent
+        %h3= etonmedical.title
+        %h4= etonmedical.date.to_s :oems_standard
+        %h5 Venue: #{etonmedical.venue}
+        - unless etonmedical.etonmedicalimgs.empty?
+          = render partial: 'layouts/carousel', locals: { :images => etonmedical.etonmedicalimgs }
+        %p=raw etonmedical.customhtml
+        %p=raw etonmedical.content
