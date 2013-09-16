@@ -10,6 +10,6 @@
         %h4= etonmedical.date.to_s :oems_standard
         %h5 Venue: #{etonmedical.venue}
         - unless etonmedical.etonmedicalimgs.empty?
-          = render partial: 'layouts/carousel', locals: { :images => etonmedical.etonmedicalimgs }
+          = render partial: 'layouts/carousel', locals: { :images => etonmedical.etonmedicalimgs, :id => etonmedical.id }
         %p=raw etonmedical.customhtml
         %p=raw etonmedical.content
