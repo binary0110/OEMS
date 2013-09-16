@@ -1,4 +1,4 @@
-#myCarousel.carousel.slide{"data-interval" => "false"}
+.carousel.slide{:id => "myCarousel", "data-interval" => "false"}
   %ol.carousel-indicators
     - images.each_with_index do |image, index|
       - if index == 0
@@ -8,7 +8,7 @@
   .carousel-inner
     - images.each_with_index do |image, index|
       - if index == 0
-        .active.item
+        .item.active
           =image_tag image.thumblink
           .carousel-caption
             %p
