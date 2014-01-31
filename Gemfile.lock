@@ -178,7 +178,7 @@ DEPENDENCIES
   newrelic_rpm
   pg
   quiet_assets
-  rails (= 3.2.13)
+  rails
   rails_admin
   sass-rails (~> 3.2.3)
   simple_form

@@ -36,7 +36,7 @@ OEMS::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.smtp_settings = {
-    :address              => "scl-vm-www13.servercentre.net",
+    :address              => "sch-www13.emailandapps.co.uk",
     :port                 => 26,
     :domain               => "oems.org.uk",
     :user_name            => "weg98hjs@oems.org.uk",
