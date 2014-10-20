@@ -39,8 +39,8 @@ OEMS::Application.configure do
     :address              => "smtp.sendgrid.net",
     :port                 => 587,
     :domain               => "heroku.com",
-    :user_name            => "SENDGRID_USERNAME",
-    :password             => "SENDGRID_PASSWORD",
+    :user_name            => "app15755479@heroku.com",
+    :password             => "pgpioe2j",
     :authentication       => :plain,
     :enable_starttls_auto => true
   }
