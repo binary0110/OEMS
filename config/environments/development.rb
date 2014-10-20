@@ -36,11 +36,11 @@ OEMS::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.smtp_settings = {
-    :address              => "sch-www13.emailandapps.co.uk",
-    :port                 => 26,
-    :domain               => "oems.org.uk",
-    :user_name            => "weg98hjs@oems.org.uk",
-    :password             => "weg98hjs",
+    :address              => "smtp.sendgrid.net",
+    :port                 => 587,
+    :domain               => "heroku.com",
+    :user_name            => "SENDGRID_USERNAME",
+    :password             => "SENDGRID_PASSWORD",
     :authentication       => :plain,
     :enable_starttls_auto => true
   }
